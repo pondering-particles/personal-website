@@ -1,0 +1,163 @@
+<html>
+<head>
+    <title>Home</title>
+    <meta charset='UTF-8'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+
+    <meta name='description' content='Pondering Particles is the personal website of Pratyush Kumar, a PhD candidate at Stony Brook University.'>
+    <meta name='keywords' content=''>
+    <meta name='author' content='Pratyush Kumar'>
+
+    <link href='/css/blog.css' rel='stylesheet'/>
+    <link href='/css/trac.css' rel='stylesheet'/>
+    <link href='/css/markdown.css' rel='stylesheet'/>
+
+    <script type='text/x-mathjax-config'>
+MathJax.Hub.Config({
+  jax: ['input/TeX', 'output/HTML-CSS'],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+    extensions: ['color.js']
+  },
+  messageStyle: 'none',
+  'HTML-CSS': { preferredFont: 'TeX', availableFonts: ['STIX','TeX'] }
+});
+</script>
+
+<script src='//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML' type='text/javascript'></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+</head>
+<body>
+<div class='content'>
+    <!-- <div class='nav'>
+    <ul class='wrap'>
+        <li><a href='/'>Home</a></li>
+        <li><a href='/'>Blog</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href='/feed.xml'>RSS</a></li>
+    </ul>
+    <button id="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+</div>
+
+<script>
+  // 1. Check for saved preference or system default
+  const currentTheme = localStorage.getItem('theme') || 
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  
+  // 2. Apply the theme immediately
+  document.documentElement.setAttribute('data-theme', currentTheme);
+
+  // 3. Update button text
+  const toggleButton = document.getElementById('theme-toggle');
+  if (toggleButton) {
+    toggleButton.textContent = currentTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+  }
+
+  // 4. Toggle Function
+  function toggleTheme() {
+    let theme = document.documentElement.getAttribute('data-theme');
+    let newTheme = theme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    // Update button text
+    document.getElementById('theme-toggle').textContent = 
+      newTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+  }
+</script>
+ -->
+
+ <div class="nav wrap">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/">Blog</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/feed.xml">RSS</a></li>
+  </ul>
+  
+  <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Dark Mode">
+    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    
+    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+</div>
+
+<style>
+  /* Button Styles to remove default border/bg */
+  #theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: var(--text-color); /* Matches your text color */
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+  }
+  
+  #theme-toggle:hover {
+    transform: scale(1.1);
+  }
+
+  /* Logic to Hide/Show Icons based on data-theme */
+  html:not([data-theme="dark"]) .moon-icon { display: none; }
+  html[data-theme="dark"] .sun-icon { display: none; }
+</style>
+
+<script>
+  // 1. Initialize Theme
+  const currentTheme = localStorage.getItem('theme') || 
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  
+  document.documentElement.setAttribute('data-theme', currentTheme);
+
+  // 2. Toggle Function
+  function toggleTheme() {
+    let theme = document.documentElement.getAttribute('data-theme');
+    let newTheme = theme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  }
+</script>
+    <div class='front-matter'>
+        <div class='wrap'>
+            <h1>Home</h1>
+            <h4></h4>
+            <div class='bylines'>
+                <div class='byline'>
+                    <h3>Published</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class='clear'></div>
+        </div>
+    </div>
+    <div class='wrap article'>
+        <h1>Hello World</h1>
+<p>This is a test of the homepage.</p>
+    </div>
+    <div id='bibliography'>
+        <div class='wrap'>
+            <ol class="bibliography"></ol>
+        </div>
+    </div>
+</div>
+</body>
+</html>

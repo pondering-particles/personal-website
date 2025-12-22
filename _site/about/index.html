@@ -1,0 +1,169 @@
+<html>
+<head>
+    <title>About</title>
+    <meta charset='UTF-8'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+
+    <meta name='description' content='Pondering Particles is the personal website of Pratyush Kumar, a PhD candidate at Stony Brook University.'>
+    <meta name='keywords' content=''>
+    <meta name='author' content='Pratyush Kumar'>
+
+    <link href='/css/blog.css' rel='stylesheet'/>
+    <link href='/css/trac.css' rel='stylesheet'/>
+    <link href='/css/markdown.css' rel='stylesheet'/>
+
+    <script type='text/x-mathjax-config'>
+MathJax.Hub.Config({
+  jax: ['input/TeX', 'output/HTML-CSS'],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+    extensions: ['color.js']
+  },
+  messageStyle: 'none',
+  'HTML-CSS': { preferredFont: 'TeX', availableFonts: ['STIX','TeX'] }
+});
+</script>
+
+<script src='//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML' type='text/javascript'></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+</head>
+<body>
+<div class='content'>
+    <!-- <div class='nav'>
+    <ul class='wrap'>
+        <li><a href='/'>Home</a></li>
+        <li><a href='/'>Blog</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href='/feed.xml'>RSS</a></li>
+    </ul>
+    <button id="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+</div>
+
+<script>
+  // 1. Check for saved preference or system default
+  const currentTheme = localStorage.getItem('theme') || 
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  
+  // 2. Apply the theme immediately
+  document.documentElement.setAttribute('data-theme', currentTheme);
+
+  // 3. Update button text
+  const toggleButton = document.getElementById('theme-toggle');
+  if (toggleButton) {
+    toggleButton.textContent = currentTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+  }
+
+  // 4. Toggle Function
+  function toggleTheme() {
+    let theme = document.documentElement.getAttribute('data-theme');
+    let newTheme = theme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    // Update button text
+    document.getElementById('theme-toggle').textContent = 
+      newTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+  }
+</script>
+ -->
+
+ <div class="nav wrap">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/">Blog</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/feed.xml">RSS</a></li>
+  </ul>
+  
+  <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Dark Mode">
+    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    
+    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+</div>
+
+<style>
+  /* Button Styles to remove default border/bg */
+  #theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: var(--text-color); /* Matches your text color */
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+  }
+  
+  #theme-toggle:hover {
+    transform: scale(1.1);
+  }
+
+  /* Logic to Hide/Show Icons based on data-theme */
+  html:not([data-theme="dark"]) .moon-icon { display: none; }
+  html[data-theme="dark"] .sun-icon { display: none; }
+</style>
+
+<script>
+  // 1. Initialize Theme
+  const currentTheme = localStorage.getItem('theme') || 
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  
+  document.documentElement.setAttribute('data-theme', currentTheme);
+
+  // 2. Toggle Function
+  function toggleTheme() {
+    let theme = document.documentElement.getAttribute('data-theme');
+    let newTheme = theme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  }
+</script>
+    <div class='front-matter'>
+        <div class='wrap'>
+            <h1>About</h1>
+            <h4></h4>
+            <div class='bylines'>
+                <div class='byline'>
+                    <h3>Published</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class='clear'></div>
+        </div>
+    </div>
+    <div class='wrap article'>
+        <h1 id="about-me">About Me</h1>
+
+<p>Hi!! This is Pratyush, a PhD student at Stony Brook University under the benign tutelage of <a href="https://jorge-a-mendez.github.io/">Jorge Mendez-Mendez</a> working on Robotics and ML/Agents for Science. I work on problems that are based in TAMP while drawing ideas from AI/ML, Deep Learning, Foundation models, Logic to build techniques and systems that can enable robots to comprehend and reason over the geometric nature of our world while efficiently dealing with the combinatorial explosion that this entails. Parallely, I am working towards building agentic systems that act as automated scientists, equipped with an array of foundational tools, capable of systematically tackling a non-trivial scientific problem. Prior to this, I was a Mathematics+Computer Science undergrad at Ashoka University, where I was advised by <a href="https://debayangupta.com/">Debayan Gupta</a>.</p>
+
+<p>In not too distant past, I was PhD student focused on Quantum Computing and my other deep interests lie broadly in the area of quantum many body physics where I am interested in studying methods like tensor networks, quantum MCMC, electronic structure theory etc.</p>
+
+<p>Outside academic pursuits, I enjoy standup comedy, cooking, power lifting, sketching, watching lots and lots of films across all genres, languages and eras. In the distant future, I intend to learn to use the synthesizer and make films.</p>
+
+    </div>
+    <div id='bibliography'>
+        <div class='wrap'>
+            <ol class="bibliography"></ol>
+        </div>
+    </div>
+</div>
+</body>
+</html>
